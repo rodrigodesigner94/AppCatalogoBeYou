@@ -15,7 +15,8 @@ function CarslHome() {
       .get("https://catalogoprodby.herokuapp.com/carrossel")
       .then((res) => setImgs(res.data))
       .catch((err) => console.log(err));
-  };
+  }; 
+  
   return (
     <Carousel  variant="dark">
       <Carousel.Item>     
@@ -24,8 +25,9 @@ function CarslHome() {
           image={img.urlImage}
           name={img.name}
           key={key} />
+          
         ))}            
-      </Carousel.Item>      
+      </Carousel.Item>                 
     </Carousel>
   );
 }

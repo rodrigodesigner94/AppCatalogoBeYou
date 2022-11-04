@@ -25,7 +25,7 @@ function RgstrProdcts() {
             size,
             quantity
         };
-        axios.post('/product', inputProduct)
+        axios.post('https://catalogoprodby.herokuapp.com/product', inputProduct)
           .then(function (res) {
             console.log(res);
           })

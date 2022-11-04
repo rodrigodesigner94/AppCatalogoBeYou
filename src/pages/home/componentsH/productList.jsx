@@ -1,10 +1,9 @@
-import CarslHome from "./componentsH/carrosel";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import ProductCard from "./componentsH/productCard";
 import { Container } from "react-bootstrap";
+import ProductCard from "./productCard";
 
-function Home() {
+function ProductsList () {
     const [products, setProducts] = useState([]);
     useEffect(()=> {
         getProducts();
@@ -15,22 +14,15 @@ function Home() {
         .get("https://catalogoprodby.herokuapp.com/product")
         .then((res) => setProducts(res.data))
         .catch((err) => console.log(err))
-    };    
-    console.log(products)
-   
-    return (
-        <div id="body">
-            <Container>
-            <CarslHome />
-            </Container>
-            
-            <Container style={{marginRight: "2rem", marginLeft: "2rem"}}>
+    }; 
+    return(
+        <Container style={{marginRight: "2rem", marginLeft: "2rem"}}>
             <div id="products">
                 {products.map((product, key) => (
                     <ProductCard 
                         name={product.name}
                         price={product.price}
-                        image={product.imageFront}
+                        iamge={product.imageFront}
                         description={product.description}
                         color={product.color}
                         size={product.size}
@@ -40,10 +32,8 @@ function Home() {
 
                 ))}            
             </div>            
-            </Container>            
-        </div>
+            </Container>
     )
-};
-  
-export default Home;
-  
+
+}
+export default ProductsList;
