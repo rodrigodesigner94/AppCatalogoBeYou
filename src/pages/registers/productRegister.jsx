@@ -28,9 +28,11 @@ function RgstrProdcts() {
         };
         axios.post('https://catalogoprodby.herokuapp.com/product', inputProduct)
           .then(function (res) {
-            console.log(res);
+            alert(`Produto ${name} cadastrado com sucesso!`);
+            window.location.reload();
           })
           .catch(function (err) {
+            alert(`Desculpa houve um erro, certtifique-se de todos os dados, tente novamente!`)
             console.error(err);
           });
     };
