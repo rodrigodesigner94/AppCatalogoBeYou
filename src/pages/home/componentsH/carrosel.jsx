@@ -5,9 +5,9 @@ function CarslHome({image, name}) {
   
   
   return (                 
-      <Figure style={{display: "flex", alingItens: "center", marginLeft:"22rem", marginRight: "22rem", marginTop: "1rem"}}>
+      <Figure style={{display: "flex", alingItens: "center",justifyContent: "center", marginTop: "1rem"}}>
         <Figure.Image       
-          width={400}
+          width={"390rem"}
           // height={180}
           alt={name}
           src={image}
