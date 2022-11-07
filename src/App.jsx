@@ -7,8 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/home';
 import React from 'react';
 import RgstrProdcts from "./pages/registerProducts";
-
-import NavTop from './pages/componentsG/Nav';
+import NavTop from "./pages/componentsG/nav";
 
 
 function App() {
