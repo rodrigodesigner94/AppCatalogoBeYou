@@ -32,8 +32,8 @@ function Home() {
    
     return (
         <div id="body">
-            <Container style={{ backgroundColor:"#fbe2ea"}}>            
-                <Carousel>                   
+                       
+                <Carousel style={{ width:"100%" ,backgroundColor:"#fbe2ea"}}>                   
                     {imgs.map((img, key) => (
                         <Carousel.Item>
                             <CarslHome 
@@ -43,9 +43,9 @@ function Home() {
                         </Carousel.Item>                               
                      ))}                    
                 </Carousel>                       
-            </Container>
+            
 
-            <Container style={{marginRight: "2rem", marginLeft: "2rem"}}>
+            <Container style={{justifyContent: "center"}}>
             <div id="products">
                 {products.map((product, key) => (
                     <ProductCard 
