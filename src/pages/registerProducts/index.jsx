@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import axios from 'axios';
 
+
 function RgstrProdcts() {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
@@ -25,7 +26,7 @@ function RgstrProdcts() {
             size,
             quantity
         };
-        axios.post('/product', inputProduct)
+        axios.post('https://catalogoprodby.herokuapp.com/product', inputProduct)
           .then(function (res) {
             console.log(res);
           })
