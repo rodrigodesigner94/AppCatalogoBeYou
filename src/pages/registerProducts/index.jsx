@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import axios from 'axios';
 
+
 function RgstrProdcts() {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');

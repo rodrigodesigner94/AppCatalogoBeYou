@@ -1,34 +1,23 @@
-import Carousel from 'react-bootstrap/Carousel';
-import ImagsCarrosel from './imgCarrosel';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import Figure from 'react-bootstrap/Figure';
 
 
-function CarslHome() {
-  const [imgs, setImgs] = useState([]);
-  useEffect(() =>{
-      getCarrosel();
-  }, []);
-
- const getCarrosel = () =>{
-      axios
-      .get("https://catalogoprodby.herokuapp.com/carrossel")
-      .then((res) => setImgs(res.data))
-      .catch((err) => console.log(err));
-  }; 
+function CarslHome({image, name}) {
   
-  return (
-    <Carousel  variant="dark">
-      <Carousel.Item>     
-        {imgs.map((img, key) => (
-          <ImagsCarrosel 
-          image={img.urlImage}
-          name={img.name}
-          key={key} />
-          
-        ))}            
-      </Carousel.Item>                 
-    </Carousel>
+  
+  return (                 
+      <Figure style={{display: "flex", alingItens: "center", marginLeft:"22rem", marginRight: "22rem", marginTop: "1rem"}}>
+        <Figure.Image       
+          width={400}
+          // height={180}
+          alt={name}
+          src={image}
+          style={{borderRadius: "2%"}}
+        />
+        <Figure.Caption className="text-black" style={{position: "absolute", marginLeft: "1rem", textShadow: "2px 2px 1.25px white",
+      top:"3rem"}}>
+        <h4 >{name}</h4>
+        </Figure.Caption>        
+      </Figure>      
   );
 }
 
