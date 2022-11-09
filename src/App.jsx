@@ -9,6 +9,8 @@ import React from 'react';
 import RgstrProdcts from "./pages/registers/productRegister";
 import NavTop from "./pages/componentsG/nav";
 import RgstrCarrosel from "./pages/registers/carroselRegister";
+import Admin from "./pages/admin";
+import RgstrConsumer from "./consumerRegister";
 
 
 function App() {
@@ -21,9 +23,12 @@ function App() {
       <br/>      
       <br/>      
       <Routes>
-      <Route element={<Home />} exact path="/" />
-      <Route element={<RgstrProdcts />} path="/cadastrarProduto" />
-      <Route element={<RgstrCarrosel/>} path="/cadastrarFoto" />
+      <Route element={<Home />} path="/" />
+      <Route element={<RgstrProdcts />} path="/cadastrarproduto" />
+      <Route element={<RgstrCarrosel/>} path="/cadastrarfoto" />
+      <Route element={<Admin/>} path="/admin" />
+      <Route element={<RgstrConsumer/>} path="/cadastrodecliente" />
+      
       </Routes>
 
     </Router>

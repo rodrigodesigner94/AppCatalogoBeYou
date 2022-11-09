@@ -21,7 +21,7 @@ function RgstrCarrosel() {
             window.location.reload();
           })
           .catch(function (err) {
-            alert(`Desculpa houve um erro, certtifique-se de todos os dados, tente novamente!`)
+            alert(`Desculpa houve um erro, certifique-se de todos os dados, tente novamente!`)
             console.error(err);
           });
     };
@@ -31,7 +31,7 @@ function RgstrCarrosel() {
         <Form onSubmit={hundleSubmit}
         style={{width: "20rem", paddingTop: "15px", marginLeft: "2rem"}}>
             <div>
-                <h1>Cadastrar Novo Produto</h1>
+                <h1>Cadastrar Nova Imagem</h1>
             </div>
       <Form.Group className="mb-1">
         <Form.Label>Nome:</Form.Label>
