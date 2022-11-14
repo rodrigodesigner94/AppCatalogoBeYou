@@ -17,6 +17,7 @@ function RgstrConsumer() {
     const navgate = useNavigate();
     
     
+          
     const hundleSubmit = (event) =>{
         event.preventDefault();
         const inputConsumer = {
@@ -32,7 +33,7 @@ function RgstrConsumer() {
         axios.post('https://catalogoprodby.herokuapp.com/clients', inputConsumer)
           .then(function (res) {
             alert(`Cadastrado efetuado com sucesso!`);
-            navgate('/');
+            navgate('/produtos');
             
           })
           .catch(function (err) {
@@ -100,4 +101,5 @@ function RgstrConsumer() {
     </Form>
     )
 }
+
 export default RgstrConsumer;

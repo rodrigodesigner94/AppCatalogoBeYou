@@ -10,7 +10,7 @@ import RgstrProdcts from "./pages/registers/productRegister";
 import NavTop from "./pages/componentsG/nav";
 import RgstrCarrosel from "./pages/registers/carroselRegister";
 import Admin from "./pages/admin";
-import RgstrConsumer from "./consumerRegister";
+import RgstrConsumer  from "./pages/consumerRegister";
 
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
       <br/>      
       <br/>      
       <Routes>
-      <Route element={<Home />} path="/" />
+      <Route element={<Home />} path="/produtos" />
       <Route element={<RgstrProdcts />} path="/cadastrarproduto" />
       <Route element={<RgstrCarrosel/>} path="/cadastrarfoto" />
       <Route element={<Admin/>} path="/admin" />
-      <Route element={<RgstrConsumer/>} path="/cadastrodecliente" />
+      <Route element={<RgstrConsumer/>} path="/" />
       
       </Routes>
 

@@ -33,9 +33,9 @@ function NavTop(){
           />
           
         </Form>        
-      <Link to="/cadastrodecliente" className="text-black" >                        
+      {/* <Link to="/cadastrodecliente" className="text-black" >                        
             Cadastre-se          
-          </Link>
+          </Link> */}
     </Container>
   </Navbar>
   )

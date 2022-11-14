@@ -12,7 +12,7 @@ function Admin(){
     }, [])
     const getConsumers = () => {
         axios
-        .get("https://catalogoprodby.herokuapp.com/clients")
+        .get("https://apicatalogobeyou.up.railway.app/clients")
         .then((res) => setConsumers(res.data))
         .catch((err) => console.log(err))
     };

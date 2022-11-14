@@ -15,7 +15,7 @@ function RgstrCarrosel() {
             name,
             urlImage
         };
-        axios.post('https://catalogoprodby.herokuapp.com/carrossel', inputImage)
+        axios.post('https://apicatalogobeyou.up.railway.app/carrossel', inputImage)
           .then(function (res) {
             alert(`Imagem ${name} cadastrado com sucesso!`);
             window.location.reload();

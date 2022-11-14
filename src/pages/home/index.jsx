@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 
 
+
 function Home() {
     const [products, setProducts] = useState([]);
     useEffect(()=> {
@@ -14,7 +15,7 @@ function Home() {
 
     const getProducts = () => {
         axios
-        .get("https://catalogoprodby.herokuapp.com/product")
+        .get("https://apicatalogobeyou.up.railway.app/products")
         .then((res) => setProducts(res.data))
         .catch((err) => console.log(err))
     };    
@@ -25,18 +26,19 @@ function Home() {
   
    const getCarrosel = () =>{
         axios
-        .get("https://catalogoprodby.herokuapp.com/carrossel")
+        .get("https://apicatalogobeyou.up.railway.app/carrossel")
         .then((res) => setImgs(res.data))
         .catch((err) => console.log(err));
     }; 
    
     return (
         <div id="body">
+           
                        
-                <Carousel style={{ width:"100%" ,backgroundColor:"#fbe2ea"}}>                   
+                <Carousel className="d-flex" variant="dark" style={{ width:"100%" }}>                   
                     {imgs.map((img, key) => (
                         <Carousel.Item>
-                            <CarslHome 
+                            <CarslHome                               
                                 image={img.urlImage}
                                 name={img.name}
                                 key={key} />

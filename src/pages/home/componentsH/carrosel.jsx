@@ -1,14 +1,15 @@
 import Figure from 'react-bootstrap/Figure';
 
 
+
 function CarslHome({image, name}) {
   
   
   return (                 
-      <Figure style={{display: "flex", alingItens: "center",justifyContent: "center", marginTop: "1rem"}}>
+      <Figure id='image' style={{display: "flex", alingItens: "center",justifyContent: "center", margin: "0.5rem"}}>
         <Figure.Image       
           width={"390rem"}
-          // height={180}
+          // height={"180rem"}
           alt={name}
           src={image}
           style={{borderRadius: "2%"}}

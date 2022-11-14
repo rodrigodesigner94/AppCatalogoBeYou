@@ -26,7 +26,7 @@ function RgstrProdcts() {
             size,
             quantity
         };
-        axios.post('https://catalogoprodby.herokuapp.com/product', inputProduct)
+        axios.post('https://apicatalogobeyou.up.railway.app/product', inputProduct)
           .then(function (res) {
             alert(`Produto ${name} cadastrado com sucesso!`);
             window.location.reload();
