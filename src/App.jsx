@@ -23,11 +23,11 @@ function App() {
       <br/>      
       <br/>      
       <Routes>
-      <Route element={<Home />} path="/produtos" />
+      <Route element={<Home />} path="/" />
       <Route element={<RgstrProdcts />} path="/cadastrarproduto" />
       <Route element={<RgstrCarrosel/>} path="/cadastrarfoto" />
       <Route element={<Admin/>} path="/admin" />
-      <Route element={<RgstrConsumer/>} path="/" />
+      <Route element={<RgstrConsumer/>} path="/cadastrarcliente" />
       
       </Routes>
 
