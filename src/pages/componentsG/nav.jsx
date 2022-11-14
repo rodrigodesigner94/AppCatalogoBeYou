@@ -12,7 +12,7 @@ function NavTop(){
     <Navbar style={{backgroundColor: '#f5cdf8', zIndex:'1', position: 'fixed', width: "100vw"}} >
     <Container style={{marginLeft: "1.5rem", display: 'flex', justifyContent:'space-between'}}  >
     <Navbar.Brand href="#home">
-      <Link to="/">
+      <Link to="/produtos">
         <img
           src="/logo.png"
           width="40"
