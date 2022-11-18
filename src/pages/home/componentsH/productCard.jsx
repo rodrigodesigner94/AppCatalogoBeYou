@@ -7,7 +7,7 @@ function ProductCard({name, price, image, description, color, size, id}) {
   
 
   return (     
-    <Card className="bg-ligth text-black" style={{width: "11rem", margin:"0.5rem"}}>
+    <Card className="bg-ligth text-black" style={{width: "10rem", margin:"0.5rem"}}>
       <Card.Img src={image} alt={name} />
       <Card.ImgOverlay>                         
         <Card.Title style={{textShadow: "0.8px 0.8px 1px white"}}>{name}</Card.Title>

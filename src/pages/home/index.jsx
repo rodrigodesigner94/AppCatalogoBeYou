@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./componentsH/productCard";
 import { Container } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
+import SizeTable from "./componentsH/sizeTable";
 
 
 
@@ -63,7 +64,11 @@ function Home() {
 
                 ))}            
             </div>            
-            </Container>            
+            </Container> 
+
+            <Container className="d-flex" style={{justifyContent:"end"}}>
+            <SizeTable />            
+            </Container>           
         </div>
     )
 };
