@@ -53,7 +53,7 @@ function Home() {
                     <ProductCard 
                         name={product.name}
                         price={product.price}
-                        image={product.imageFront}
+                        image={product.frontImage}
                         description={product.description}
                         color={product.color}
                         size={product.size}
