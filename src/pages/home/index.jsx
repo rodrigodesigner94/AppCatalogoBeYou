@@ -30,7 +30,8 @@ function Home() {
         .get("https://apicatalogobeyou.up.railway.app/carrossel")
         .then((res) => setImgs(res.data))
         .catch((err) => console.log(err));
-    }; 
+    };
+     
     
     return (
         <div id="body">

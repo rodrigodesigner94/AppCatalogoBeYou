@@ -12,7 +12,7 @@ function ProductCard({name, price, image, description, color, size, bImage}) {
     <Card onClick={() => setOpen(!open)}
           aria-controls="colapseText"
           aria-expanded={open}
-          className="bg-ligth text-black" style={{width: "10rem", margin:"0.5rem"}}>
+          className="bg-ligth text-black" style={{width: "10rem", margin:"0.2rem"}}>
       <Card.Img src={image} alt={name} />
       <Card.ImgOverlay>                         
         <Card.Title style={{textShadow: "0.8px 0.8px 1px white"}}>{name}</Card.Title>
@@ -20,7 +20,7 @@ function ProductCard({name, price, image, description, color, size, bImage}) {
           {price}</Card.Subtitle>
           <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Tamanho:</strong> {size}</Card.Text>        
         
-        <Collapse in={open} dimension="width" style={{marginLeft:"-1.8rem"}}>
+        <Collapse in={open} dimension="width" style={{marginLeft:"-1.8rem", marginTop:"-1rem"}}>
           <div id="colapseText" >
             <Card body style={{ width: '13.5rem',zIndex: "1" }}>
               <Container className='d-flex' style={{justifyContent:"end", padding: "0"}}>
