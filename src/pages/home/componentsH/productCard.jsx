@@ -17,7 +17,8 @@ function ProductCard({name, price, image, description, color, size, bImage}) {
       <Card.ImgOverlay>                         
         <Card.Title style={{textShadow: "0.8px 0.8px 1px white"}}>{name}</Card.Title>
         <Card.Subtitle className="text-black" style={{textShadow: "1.5px 1.5px 1px white"}}>
-          {price}</Card.Subtitle>        
+          {price}</Card.Subtitle>
+          <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Tamanho:</strong> {size}</Card.Text>        
         
         <Collapse in={open} dimension="width" style={{marginLeft:"-1.8rem"}}>
           <div id="colapseText" >
@@ -26,7 +27,6 @@ function ProductCard({name, price, image, description, color, size, bImage}) {
                 <img src="https://cdn-icons-png.flaticon.com/512/88/88039.png?w=740&t=st=1669119726~exp=1669120326~hmac=38176d558c65f8ebdf830f2efb86e0461701cf27c10a25d06a4147017aea54c8" height={"12rem"} /> 
                 </Container>
               <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Cor:</strong> {color}</Card.Text>
-              <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Tamanho:</strong> {size}</Card.Text>
               <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>descrição:</strong> {description}</Card.Text>
               <Card.Img style={{width: "90%"}} src={bImage} alt="costas" />
             </Card>
