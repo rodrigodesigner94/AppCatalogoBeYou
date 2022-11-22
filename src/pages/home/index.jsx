@@ -31,7 +31,7 @@ function Home() {
         .then((res) => setImgs(res.data))
         .catch((err) => console.log(err));
     }; 
-   
+    
     return (
         <div id="body">
            
@@ -55,10 +55,10 @@ function Home() {
                         name={product.name}
                         price={product.price}
                         image={product.frontImage}
+                        bImage={product.backImage}
                         description={product.description}
                         color={product.color}
-                        size={product.size}
-                        id={product._id}
+                        size={product.size}                        
                         key={key}
                     />
 

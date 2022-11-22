@@ -1,23 +1,44 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Figure from 'react-bootstrap/Figure';
-import { Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import Collapse from 'react-bootstrap/Collapse';
+import { Container } from 'react-bootstrap';
 
-function ProductCard({name, price, image, description, color, size, id}) {
-  
+
+function ProductCard({name, price, image, description, color, size, bImage}) {  
+  const [open, setOpen] = useState(false);
+
 
   return (     
-    <Card className="bg-ligth text-black" style={{width: "10rem", margin:"0.5rem"}}>
+    <Card onClick={() => setOpen(!open)}
+          aria-controls="colapseText"
+          aria-expanded={open}
+          className="bg-ligth text-black" style={{width: "10rem", margin:"0.5rem"}}>
       <Card.Img src={image} alt={name} />
       <Card.ImgOverlay>                         
         <Card.Title style={{textShadow: "0.8px 0.8px 1px white"}}>{name}</Card.Title>
         <Card.Subtitle className="text-black" style={{textShadow: "1.5px 1.5px 1px white"}}>
-          {price}</Card.Subtitle>
-        {/* <Card.Text><strong>Descrição:</strong> {description}.</Card.Text>  */}
-        <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Cor:</strong> {color}</Card.Text>
-        <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Tamanho:</strong> {size}</Card.Text>
+          {price}</Card.Subtitle>        
+        <div 
+    // style={{ minHeight: '10rem' }}
+    >
+        <Collapse in={open} dimension="width">
+          <div id="colapseText" >
+            <Card body style={{ width: '15rem',zIndex: "1" }}>
+              <Container className='d-flex' style={{justifyContent:"end", padding: "0"}}>
+                <img src="https://cdn-icons-png.flaticon.com/512/88/88039.png?w=740&t=st=1669119726~exp=1669120326~hmac=38176d558c65f8ebdf830f2efb86e0461701cf27c10a25d06a4147017aea54c8" height={"12rem"} /> 
+                </Container>
+              <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Cor:</strong> {color}</Card.Text>
+              <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>Tamanho:</strong> {size}</Card.Text>
+              <Card.Text style={{textShadow: "1.5px 1.5px 1px white"}}><strong>descrição:</strong> {description}</Card.Text>
+              <Card.Img width={"2rem"} src={bImage} alt="costas" />
+            </Card>
+          </div>
+        </Collapse>
+      </div>
         {/* <Button style={{opacity:"60%"}} variant="primary">Quero esse</Button>        */}
-      </Card.ImgOverlay>
+      </Card.ImgOverlay>      
+      
+    
     </Card>
     
   );
