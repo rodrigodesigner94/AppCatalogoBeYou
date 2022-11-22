@@ -4,6 +4,7 @@ import ComsumerList from "./consumerList";
 import { Container } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
+import Products from "./productList";
 
 function Admin(){
     const [consumers, setConsumers] = useState([]);
@@ -16,6 +17,18 @@ function Admin(){
         .then((res) => setConsumers(res.data))
         .catch((err) => console.log(err))
     };
+
+    const [products, setProducts] = useState([]);
+    useEffect(()=> {
+        getProducts();
+    }, [])
+
+    const getProducts = () => {
+        axios
+        .get("https://apicatalogobeyou.up.railway.app/products")
+        .then((res) => setProducts(res.data))
+        .catch((err) => console.log(err))
+    };   
 
     return(
         <div>
@@ -39,11 +52,29 @@ function Admin(){
                 phone={consumer.phone}
                 email={consumer.email}
                 adress={consumer.adress}
-                postalCode={consumer.postalCode}
+                postalCode={consumer.postalCode}                
                 key={key}
                  />
         ))}
-        </Container>       
+        </Container>
+
+        <Container className="d-flex" style={{justifyContent: "center", flexWrap:"wrap" }}>                        
+                {products.map((product, key) => (
+                    <Products 
+                        name={product.name}
+                        price={product.price}
+                        image={product.frontImage}
+                        bImage={product.backImage}
+                        description={product.description}
+                        color={product.color}
+                        size={product.size}
+                        id={product._id}                   
+                        quantity={product.quantity}
+                        key={key}
+                    />
+                ))}            
+                        
+            </Container>       
         
         </div>
     )

@@ -12,7 +12,7 @@ function RgstrProdcts() {
     const [description, setDescription] = useState('');
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
-    const [quantity, setquantity] = useState(0);
+    const [quantity, setQuantity] = useState(0);
     
     const hundleSubmit = (event) =>{
         event.preventDefault();
@@ -70,7 +70,7 @@ function RgstrProdcts() {
 
       <Form.Group className="mb-5" >
         <Form.Label>Description:</Form.Label>
-        <Form.Control style={{higth: "7rem"}} type="text" placeholder="Informes as cores"
+        <Form.Control style={{higth: "7rem"}} type="text" placeholder="Descreva o produto"
         onChange={(event) => setDescription(event.target.value)} />
       </Form.Group>
 
@@ -91,7 +91,7 @@ function RgstrProdcts() {
         <Form.Group className="mb-6" >
         <Form.Label>Quantidade:</Form.Label>
         <Form.Control type="number" placeholder="Informes a quantidade" 
-        onChange={(event) => setquantity(event.target.value)}/>
+        onChange={(event) => setQuantity(event.target.value)}/>
       </Form.Group>
 
       </Form.Group>           
